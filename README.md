@@ -6,15 +6,15 @@
 ### Framework
 - React
 
+### Bundler
+- webpack
+
 ### Languages
 - TypeScript
 - CSS
 - HTML
 
-### Bundler
-- webpack
-
-### Transpiler
+### Transpiling
 - Babel
 
 ### Linting & Testing
