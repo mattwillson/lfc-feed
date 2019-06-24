@@ -3,8 +3,9 @@
   <p>Aggregator of official Liverpool FC content</p>
 </div>
 
-### Framework
+### Frameworks
 - React
+- Bootstrap
 
 ### Bundler
 - webpack
