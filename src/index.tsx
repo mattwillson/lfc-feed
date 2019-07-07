@@ -1,8 +1,6 @@
-// Put any other imports below './custom.scss' so that CSS from
-// components takes precedence over customized Bootstrap styles.
-import './custom.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './custom.scss';
 import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
