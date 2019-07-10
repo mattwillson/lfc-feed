@@ -1,9 +1,21 @@
 import React from 'react';
+import youtube from '../api/youtube';
 
 class YouTubeIcon extends React.Component {
+  handleClick = async () => {
+    const response = await youtube.get('/playlistItems', {
+      params: {
+        playlistId: 'UU9LQwHZoucFT94I2h6JOcjw'
+      }
+    });
+
+    console.log(response.data.items);
+  };
+
   render() {
     return (
       <svg
+        onClick={this.handleClick}
         xmlns="http://www.w3.org/2000/svg"
         width="32"
         height="32"
