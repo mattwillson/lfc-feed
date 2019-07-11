@@ -3,16 +3,24 @@ import './App.css';
 import Header from './Header';
 import Feed from './Feed';
 
-class App extends React.Component {
+type State = {
+  videos: object[];
+};
+
+class App extends React.Component<{}, State> {
+  state: State = { videos: [] };
+
   onYoutubeClick = (videos: object[]): void => {
-    console.log(videos);
+    this.setState({
+      videos: videos
+    });
   };
 
   render() {
     return (
       <div className="App">
         <Header onYoutubeClick={this.onYoutubeClick} />
-        <Feed />
+        <Feed videos={this.state.videos} />
       </div>
     );
   }
