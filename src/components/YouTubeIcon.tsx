@@ -1,7 +1,11 @@
 import React from 'react';
 import youtube from '../api/youtube';
 
-class YouTubeIcon extends React.Component {
+type Props = {
+  onClick: (videos: object[]) => void;
+};
+
+class YouTubeIcon extends React.Component<Props, {}> {
   handleClick = async () => {
     const response = await youtube.get('/playlistItems', {
       params: {
@@ -9,7 +13,7 @@ class YouTubeIcon extends React.Component {
       }
     });
 
-    console.log(response.data.items);
+    this.props.onClick(response.data.items);
   };
 
   render() {

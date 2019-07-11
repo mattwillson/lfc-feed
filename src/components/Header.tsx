@@ -2,12 +2,20 @@ import React from 'react';
 import './Header.css';
 import YouTubeIcon from './YouTubeIcon';
 
-class Header extends React.Component {
+type Props = {
+  onYoutubeClick: (videos: object[]) => void;
+};
+
+class Header extends React.Component<Props, {}> {
+  onYoutubeClick = (videos: object[]): void => {
+    this.props.onYoutubeClick(videos);
+  };
+
   render() {
     return (
       <header className="Header">
         <h1>LFC Feed</h1>
-        <YouTubeIcon />
+        <YouTubeIcon onClick={this.onYoutubeClick} />
       </header>
     );
   }
