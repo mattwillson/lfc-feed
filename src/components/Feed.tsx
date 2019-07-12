@@ -6,15 +6,22 @@ import FeedItem from './FeedItem';
 type Props = { videos: object[] };
 
 const Feed = ({ videos }: Props): JSX.Element => {
-  console.log(videos);
+  const youtubeList: JSX.Element[] = videos.map((video: any) => {
+    return (
+      <FeedItem
+        publishedAt={video.snippet.publishedAt}
+        videoTitle={video.snippet.title}
+        videoId={video.snippet.resourceId.videoId}
+        key={video.snippet.resourceId.videoId}
+      />
+    );
+  });
 
   return (
     <div className="Feed">
       <Container>
         <Row>
-          <Col>
-            <FeedItem />
-          </Col>
+          <Col>{youtubeList}</Col>
         </Row>
       </Container>
     </div>
