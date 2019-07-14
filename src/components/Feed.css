@@ -2,3 +2,14 @@
   color: #000;
   min-height: 80vh;
 }
+
+.Feed > .container {
+  padding: 7px;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .Feed > .container {
+    padding: 14px;
+  }
+}

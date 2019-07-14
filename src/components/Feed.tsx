@@ -7,22 +7,25 @@ type Props = { videos: object[] };
 
 const Feed = ({ videos }: Props): JSX.Element => {
   const youtubeList: JSX.Element[] = videos.map((video: any) => {
+    const id: string = video.snippet.resourceId.videoId;
+
     return (
-      <FeedItem
-        publishedAt={video.snippet.publishedAt}
-        videoTitle={video.snippet.title}
-        videoId={video.snippet.resourceId.videoId}
-        key={video.snippet.resourceId.videoId}
-      />
+      <Col xs={6} lg={4} key={id}>
+        <FeedItem
+          publishedAt={video.snippet.publishedAt}
+          videoTitle={video.snippet.title}
+          videoThumbnail={video.snippet.thumbnails.medium.url}
+          videoId={id}
+          key={id}
+        />
+      </Col>
     );
   });
 
   return (
     <div className="Feed">
       <Container>
-        <Row>
-          <Col>{youtubeList}</Col>
-        </Row>
+        <Row noGutters={true}>{youtubeList}</Row>
       </Container>
     </div>
   );

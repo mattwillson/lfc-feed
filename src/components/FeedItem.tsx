@@ -1,9 +1,11 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import './FeedItem.css';
 
 type Props = {
   publishedAt: string;
   videoTitle: string;
+  videoThumbnail: string;
   videoId: string;
 };
 
@@ -12,14 +14,9 @@ class FeedItem extends React.Component<Props, {}> {
 
   render() {
     return (
-      <div className="FeedItem">
-        <Card>
-          <Card.Body>
-            <iframe src={this.videoSrc} title="video player" />
-            <Card.Title>{this.props.videoTitle}</Card.Title>
-          </Card.Body>
-        </Card>
-      </div>
+      <Card className="FeedItem">
+        <Card.Img src={this.props.videoThumbnail} />
+      </Card>
     );
   }
 }
