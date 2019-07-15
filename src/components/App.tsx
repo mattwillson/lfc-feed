@@ -8,7 +8,9 @@ type State = {
 };
 
 class App extends React.Component<{}, State> {
-  state: State = { videos: [] };
+  state: State = {
+    videos: []
+  };
 
   onYoutubeClick = (videos: object[]): void => {
     this.setState({
