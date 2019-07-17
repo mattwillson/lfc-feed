@@ -1,5 +1,10 @@
 .FeedItem {
-  margin: 7px;
+  margin: 2px;
+  border: 0;
+}
+
+.FeedItem > .card-img {
+  border-radius: 0;
 }
 
 /* Medium devices (tablets, 768px and up) */

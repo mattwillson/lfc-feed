@@ -3,13 +3,26 @@
   min-height: 80vh;
 }
 
-.Feed > .container {
-  padding: 7px;
+.Feed > .container-fluid {
+  padding: 2px 0;
+  max-width: 950px;
+}
+
+.Feed > .container-fluid > .row {
+  margin: 0 -2px;
+}
+
+.Feed > .container-fluid > .row > .col-6 {
+  padding: 0;
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .Feed > .container {
-    padding: 14px;
+  .Feed > .container-fluid {
+    padding: 14px 6px;
+  }
+
+  .Feed > .container-fluid > .row {
+    margin: 0;
   }
 }

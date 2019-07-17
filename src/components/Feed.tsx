@@ -10,7 +10,7 @@ const Feed = ({ videos }: Props): JSX.Element => {
     const id: string = video.snippet.resourceId.videoId;
 
     return (
-      <Col xs={6} lg={4} key={id}>
+      <Col xs={6} md={4} key={id}>
         <FeedItem
           publishedAt={video.snippet.publishedAt}
           videoTitle={video.snippet.title}
@@ -24,8 +24,8 @@ const Feed = ({ videos }: Props): JSX.Element => {
 
   return (
     <div className="Feed">
-      <Container>
-        <Row noGutters={true}>{youtubeList}</Row>
+      <Container fluid={true}>
+        <Row>{youtubeList}</Row>
       </Container>
     </div>
   );
