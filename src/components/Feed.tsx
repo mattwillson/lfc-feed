@@ -11,13 +11,7 @@ const Feed = ({ videos }: Props): JSX.Element => {
 
     return (
       <Col xs={6} md={4} key={id}>
-        <FeedItem
-          publishedAt={video.snippet.publishedAt}
-          videoTitle={video.snippet.title}
-          videoThumbnail={video.snippet.thumbnails.medium.url}
-          videoId={id}
-          key={id}
-        />
+        <FeedItem video={video} videoId={id} key={id} />
       </Col>
     );
   });

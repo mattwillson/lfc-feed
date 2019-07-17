@@ -4,9 +4,7 @@ import './FeedItem.css';
 import FeedModal from './FeedModal';
 
 type Props = {
-  publishedAt: string;
-  videoTitle: string;
-  videoThumbnail: string;
+  video: any;
   videoId: string;
 };
 
@@ -18,8 +16,6 @@ class FeedItem extends React.Component<Props, State> {
   state: State = {
     show: false
   };
-
-  videoSrc: string = `https://www.youtube.com/embed/${this.props.videoId}`;
 
   modalClose = (): void => {
     this.setState({ show: false });
@@ -33,10 +29,15 @@ class FeedItem extends React.Component<Props, State> {
     return (
       <>
         <Card onClick={this.modalShow} className="FeedItem">
-          <Card.Img src={this.props.videoThumbnail} />
+          <Card.Img src={this.props.video.snippet.thumbnails.medium.url} />
         </Card>
 
-        <FeedModal show={this.state.show} onHide={this.modalClose} />
+        <FeedModal
+          show={this.state.show}
+          onHide={this.modalClose}
+          video={this.props.video}
+          videoId={this.props.videoId}
+        />
       </>
     );
   }

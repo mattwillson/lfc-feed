@@ -5,9 +5,13 @@ import './FeedModal.css';
 type Props = {
   show: boolean;
   onHide: () => void;
+  video: any;
+  videoId: string;
 };
 
 class FeedModal extends React.Component<Props, {}> {
+  videoSrc: string = `https://www.youtube.com/embed/${this.props.videoId}`;
+
   render() {
     return (
       <Modal
@@ -16,7 +20,7 @@ class FeedModal extends React.Component<Props, {}> {
         dialogClassName="FeedModal"
         centered
       >
-        <Modal.Body>Modal body</Modal.Body>
+        <Modal.Body>{this.props.video.snippet.title}</Modal.Body>
       </Modal>
     );
   }
