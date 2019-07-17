@@ -4,12 +4,12 @@
 }
 
 .Feed > .container-fluid {
-  padding: 2px 0;
+  padding: 4px;
   max-width: 950px;
 }
 
 .Feed > .container-fluid > .row {
-  margin: 0 -2px;
+  margin: 0;
 }
 
 .Feed > .container-fluid > .row > .col-6 {
@@ -20,9 +20,5 @@
 @media (min-width: 768px) {
   .Feed > .container-fluid {
     padding: 14px 6px;
-  }
-
-  .Feed > .container-fluid > .row {
-    margin: 0;
   }
 }
