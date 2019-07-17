@@ -1,0 +1,10 @@
+.FeedModal {
+  max-width: 912px;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .FeedModal {
+    margin: 0.5rem 0;
+  }
+}

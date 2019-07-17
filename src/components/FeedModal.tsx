@@ -1,5 +1,6 @@
 import React from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
+import './FeedModal.css';
 
 type Props = {
   show: boolean;
@@ -9,16 +10,13 @@ type Props = {
 class FeedModal extends React.Component<Props, {}> {
   render() {
     return (
-      <Modal show={this.props.show} onHide={this.props.onHide}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
+      <Modal
+        show={this.props.show}
+        onHide={this.props.onHide}
+        dialogClassName="FeedModal"
+        centered
+      >
         <Modal.Body>Modal body</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={this.props.onHide}>
-            Close
-          </Button>
-        </Modal.Footer>
       </Modal>
     );
   }
