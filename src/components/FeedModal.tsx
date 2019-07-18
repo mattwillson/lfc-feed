@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal } from 'react-bootstrap';
+import { Modal, ResponsiveEmbed } from 'react-bootstrap';
 import './FeedModal.css';
 
 type Props = {
@@ -20,7 +20,11 @@ class FeedModal extends React.Component<Props, {}> {
         dialogClassName="FeedModal"
         centered
       >
-        <Modal.Body>{this.props.video.snippet.title}</Modal.Body>
+        <Modal.Body>
+          <ResponsiveEmbed aspectRatio="16by9">
+            <iframe src={this.videoSrc} title="video player" />
+          </ResponsiveEmbed>
+        </Modal.Body>
       </Modal>
     );
   }
