@@ -6,3 +6,7 @@
   align-items: center;
   justify-content: center;
 }
+
+.Header > svg {
+  cursor: pointer;
+}

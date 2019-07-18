@@ -4,6 +4,7 @@
 }
 
 .FeedItem > .card-img {
+  cursor: pointer;
   border-radius: 0;
 }
 
