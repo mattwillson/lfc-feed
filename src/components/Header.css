@@ -1,11 +1,30 @@
 .Header {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 77px;
+  background-color: #fff;
   color: #e31b23;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.Header > svg {
+.Header > .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1010px;
+  width: 100%;
+  height: 77px;
+  padding: 26px 20px;
+}
+
+.Header > .container > h1 {
+  line-height: 1;
+  margin: 0;
+}
+
+.Header > .container > svg {
   cursor: pointer;
 }
