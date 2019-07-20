@@ -1,6 +1,5 @@
 .Header {
   color: #e31b23;
-  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
