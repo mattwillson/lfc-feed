@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 import './Header.css';
 import YouTubeIcon from './YouTubeIcon';
 
@@ -14,8 +15,10 @@ class Header extends React.Component<Props, {}> {
   render() {
     return (
       <header className="Header">
-        <h1>LFC Feed</h1>
-        <YouTubeIcon onClick={this.onYoutubeClick} />
+        <Container>
+          <h1>LFC Feed</h1>
+          <YouTubeIcon onClick={this.onYoutubeClick} />
+        </Container>
       </header>
     );
   }
