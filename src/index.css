@@ -1,6 +1,12 @@
 /* CSS reset --> bring in normalize.css styles */
 @import-normalize;
 
+:root {
+  --color-primary: #e31b23;
+  --color-white: #fff;
+  --color-black: #000;
+}
+
 @font-face {
   font-family: 'Albertus MT';
   src: url('./fonts/AlbertusMTPro.eot');
