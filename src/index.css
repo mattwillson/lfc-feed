@@ -8,6 +8,11 @@
   --color-black: #000;
 }
 
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
 @font-face {
   font-family: 'Albertus MT';
   src: url('./fonts/AlbertusMTPro.eot');
