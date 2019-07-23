@@ -17,7 +17,7 @@ class Header extends React.Component<Props, {}> {
       <header className="Header">
         <Container>
           <a href="http://localhost:3000/" target="_self">
-            LFC Feed
+            LFC FEED
           </a>
           <YouTubeIcon onClick={this.onYoutubeClick} />
         </Container>
