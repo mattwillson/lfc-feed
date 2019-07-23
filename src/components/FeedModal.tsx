@@ -22,7 +22,7 @@ class FeedModal extends React.Component<Props, {}> {
       >
         <Modal.Body>
           <ResponsiveEmbed aspectRatio="16by9">
-            <iframe src={this.videoSrc} title="video player" />
+            <iframe src={this.videoSrc} title="video player" allowFullScreen />
           </ResponsiveEmbed>
         </Modal.Body>
       </Modal>
