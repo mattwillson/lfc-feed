@@ -2,7 +2,8 @@
 @import-normalize;
 
 :root {
-  --color-primary: #e31b23;
+  font-size: 62.5%; /* 1rem = 10px */
+  --color-primary: #e31b23; /* crimson */
   --color-white: #fff;
   --color-black: #000;
 }

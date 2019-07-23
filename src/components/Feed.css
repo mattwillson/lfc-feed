@@ -1,5 +1,5 @@
 .Feed > .container-fluid {
-  padding: 4px;
+  padding: 0.4rem;
   max-width: 975px;
 }
 
@@ -14,6 +14,6 @@
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .Feed > .container-fluid {
-    padding: 14px 6px;
+    padding: 1.4rem 0.6rem;
   }
 }

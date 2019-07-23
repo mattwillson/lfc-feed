@@ -1,5 +1,5 @@
 .FeedItem {
-  margin: 8px;
+  margin: 0.8rem;
   border: 0;
 }
 
@@ -11,6 +11,6 @@
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .FeedItem {
-    margin: 14px;
+    margin: 1.4rem;
   }
 }
