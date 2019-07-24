@@ -4,6 +4,8 @@
 :root {
   font-size: 62.5%; /* 1rem = 10px */
   --color-primary: #d10122; /* crimson */
+  --color-secondary: #00a599; /* darkcyan */
+  --color-tertiary: #fef667; /* khaki */
   --color-white: #fff;
   --color-black: #000;
 }
