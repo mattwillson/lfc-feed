@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import './Header.css';
+import HomeLink from './HomeLink';
 import YouTubeIcon from './YouTubeIcon';
 
 type Props = {
@@ -16,9 +17,7 @@ class Header extends React.Component<Props, {}> {
     return (
       <header className="Header">
         <Container>
-          <a href="http://localhost:3000/" target="_self">
-            LFC FEED
-          </a>
+          <HomeLink />
           <YouTubeIcon onClick={this.onYoutubeClick} />
         </Container>
       </header>
