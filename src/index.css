@@ -26,9 +26,11 @@
 
 body {
   margin: 0;
+  line-height: 1.5;
   font-family: 'Albertus MT', serif; /* TODO: add backup fonts */
   font-weight: 400;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'kern' 1;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased; /* Chrome, Safari */
+  -moz-osx-font-smoothing: grayscale; /* Firefox */
 }
