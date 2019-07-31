@@ -5,7 +5,7 @@ import LFCIcon from './LFCIcon';
 class Logo extends React.Component {
   render() {
     return (
-      <a className="Logo" href="/" target="_self">
+      <a className="Logo" href="/lfc-feed" target="_self">
         <LFCIcon />
         <span>LFC FEED</span>
       </a>
