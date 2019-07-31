@@ -1,4 +1,4 @@
-a.HomeLink {
+a.Logo {
   display: flex;
   align-items: center;
   color: var(--color-primary);
@@ -8,6 +8,6 @@ a.HomeLink {
   font-size: 3.2rem;
 }
 
-.HomeLink > span {
+.Logo > span {
   margin-top: 0.4rem;
 }

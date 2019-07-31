@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import './Header.css';
-import HomeLink from './HomeLink';
+import Logo from './Logo';
 import SocialIcons from './SocialIcons';
 
 type Props = {
@@ -17,7 +17,7 @@ class Header extends React.Component<Props, {}> {
     return (
       <header className="Header">
         <Container>
-          <HomeLink />
+          <Logo />
           <SocialIcons onYoutubeClick={this.onYoutubeClick} />
         </Container>
       </header>
