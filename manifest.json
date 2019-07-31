@@ -1,0 +1,20 @@
+{
+  "short_name": "LFC Feed",
+  "name": "Liverpool FC Feed",
+  "icons": [
+    {
+      "src": "lfc-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "lfc-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#e31b23",
+  "background_color": "#ffffff"
+}
