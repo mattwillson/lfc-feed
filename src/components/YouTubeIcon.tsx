@@ -6,6 +6,10 @@ type Props = {
 };
 
 class YouTubeIcon extends React.Component<Props, {}> {
+  componentDidMount() {
+    this.handleClick();
+  }
+
   handleClick = async () => {
     const response = await youtube.get('/playlistItems', {
       params: {
