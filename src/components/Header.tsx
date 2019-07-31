@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import './Header.css';
 import HomeLink from './HomeLink';
-import YouTubeIcon from './YouTubeIcon';
+import SocialIcons from './SocialIcons';
 
 type Props = {
   onYoutubeClick: (videos: object[]) => void;
@@ -18,7 +18,7 @@ class Header extends React.Component<Props, {}> {
       <header className="Header">
         <Container>
           <HomeLink />
-          <YouTubeIcon onClick={this.onYoutubeClick} />
+          <SocialIcons onYoutubeClick={this.onYoutubeClick} />
         </Container>
       </header>
     );

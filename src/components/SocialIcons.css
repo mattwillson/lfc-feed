@@ -1,0 +1,21 @@
+.SocialIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  background-color: var(--color-white);
+}
+
+.SocialIcons > svg {
+  cursor: pointer;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .SocialIcons {
+    max-width: 112px;
+  }
+}
