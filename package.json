@@ -1,5 +1,6 @@
 {
   "name": "lfc-feed",
+  "homepage": "https://mattwillson.github.io/lfc-feed",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -33,6 +34,7 @@
     "eslint-plugin-react-hooks": "^1.5.0",
     "file-loader": "3.0.1",
     "fs-extra": "7.0.1",
+    "gh-pages": "^2.0.1",
     "html-webpack-plugin": "4.0.0-beta.5",
     "husky": "^2.4.1",
     "identity-obj-proxy": "3.0.0",
@@ -73,6 +75,8 @@
     "workbox-webpack-plugin": "^4.2.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
