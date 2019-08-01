@@ -30,6 +30,9 @@ class FeedItem extends React.Component<Props, State> {
       <>
         <Card onClick={this.modalShow} className="FeedItem">
           <Card.Img src={this.props.video.snippet.thumbnails.medium.url} />
+          <Card.ImgOverlay>
+            <Card.Text>{this.props.video.snippet.title}</Card.Text>
+          </Card.ImgOverlay>
         </Card>
 
         <FeedModal
