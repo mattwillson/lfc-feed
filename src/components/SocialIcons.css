@@ -1,7 +1,7 @@
 .SocialIcons {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   max-width: 100px;
   width: 100%;
