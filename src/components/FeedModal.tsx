@@ -10,7 +10,7 @@ type Props = {
 };
 
 class FeedModal extends React.Component<Props, {}> {
-  videoSrc: string = `https://www.youtube.com/embed/${this.props.videoId}`;
+  videoSrc: string = `https://www.youtube.com/embed/${this.props.videoId}?modestbranding=1&rel=0`;
 
   render() {
     return (
