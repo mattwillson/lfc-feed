@@ -2,7 +2,6 @@ import React from 'react';
 import './SocialIcons.css';
 import YouTubeIcon from './YouTubeIcon';
 import TwitterIcon from './TwitterIcon';
-import InstagramIcon from './InstagramIcon';
 
 type Props = {
   onYoutubeClick: (videos: object[]) => void;
@@ -18,7 +17,6 @@ class SocialIcons extends React.Component<Props, {}> {
       <div className="SocialIcons">
         <YouTubeIcon onClick={this.onYoutubeClick} />
         <TwitterIcon />
-        <InstagramIcon />
       </div>
     );
   }
