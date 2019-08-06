@@ -1,14 +1,24 @@
 .FeedItem {
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0;
+  border: 0;
   margin: 0.8rem;
+}
+
+.FeedItem:focus {
+  outline-color: var(--color-primary);
+}
+
+.FeedItem > .card {
   border: 0;
 }
 
-.FeedItem > .card-img {
+.FeedItem .card-img {
   border-radius: 0;
 }
 
-.FeedItem > .card-img-overlay {
-  cursor: pointer;
+.FeedItem .card-img-overlay {
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: row;
@@ -18,11 +28,15 @@
   opacity: 0;
 }
 
-.FeedItem > .card-img-overlay:hover {
+.FeedItem .card-img-overlay:hover {
   opacity: 1;
 }
 
-.FeedItem > .card-img-overlay > .card-text {
+.FeedItem:focus .card-img-overlay {
+  opacity: 1;
+}
+
+.FeedItem .card-img-overlay > .card-text {
   color: var(--color-white);
   font-size: 0.7em;
   padding: 0.5em;

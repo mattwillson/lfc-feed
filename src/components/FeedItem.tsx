@@ -28,12 +28,14 @@ class FeedItem extends React.Component<Props, State> {
   render() {
     return (
       <>
-        <Card onClick={this.modalShow} className="FeedItem">
-          <Card.Img src={this.props.video.snippet.thumbnails.medium.url} />
-          <Card.ImgOverlay>
-            <Card.Text>{this.props.video.snippet.title}</Card.Text>
-          </Card.ImgOverlay>
-        </Card>
+        <button onClick={this.modalShow} className="FeedItem" type="button">
+          <Card>
+            <Card.Img src={this.props.video.snippet.thumbnails.medium.url} />
+            <Card.ImgOverlay>
+              <Card.Text>{this.props.video.snippet.title}</Card.Text>
+            </Card.ImgOverlay>
+          </Card>
+        </button>
 
         <FeedModal
           show={this.state.show}
