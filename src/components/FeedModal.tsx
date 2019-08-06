@@ -19,12 +19,16 @@ class FeedModal extends React.Component<Props, {}> {
         onHide={this.props.onHide}
         dialogClassName="FeedModal"
         centered
+        restoreFocus
       >
         <Modal.Body>
           <ResponsiveEmbed aspectRatio="16by9">
             <iframe src={this.videoSrc} title="video player" allowFullScreen />
           </ResponsiveEmbed>
         </Modal.Body>
+        <Modal.Footer>
+          <h1>{this.props.video.snippet.title}</h1>
+        </Modal.Footer>
       </Modal>
     );
   }
