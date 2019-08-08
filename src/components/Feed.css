@@ -3,7 +3,7 @@
 }
 
 .Feed > .container-fluid {
-  padding: 0.4rem;
+  padding: 2rem 0;
   max-width: 975px;
 }
 
@@ -11,7 +11,7 @@
   margin: 0;
 }
 
-.Feed > .container-fluid > .row > .col-6 {
+.Feed > .container-fluid > .row > .col-12 {
   padding: 0;
 }
 

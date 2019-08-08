@@ -10,7 +10,7 @@ const Feed = ({ videos }: Props): JSX.Element => {
     const id: string = video.snippet.resourceId.videoId;
 
     return (
-      <Col xs={6} md={4} key={id}>
+      <Col xs={12} md={4} key={id}>
         <FeedItem video={video} videoId={id} key={id} />
       </Col>
     );
