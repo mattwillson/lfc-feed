@@ -5,6 +5,7 @@
 .FeedModal > .modal-content {
   border: 0;
   border-radius: 0;
+  margin: 0 4rem;
 }
 
 .FeedModal .modal-body {
@@ -23,5 +24,12 @@
 @media (max-width: 575.98px) {
   .FeedModal {
     margin: 0.5rem 0;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .FeedModal > .modal-content {
+    margin: 0;
   }
 }
