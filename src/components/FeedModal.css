@@ -1,5 +1,10 @@
 .FeedModal {
-  max-width: 937px;
+  max-width: 934px;
+}
+
+.FeedModal > .modal-content {
+  border: 0;
+  border-radius: 0;
 }
 
 .FeedModal .modal-body {
