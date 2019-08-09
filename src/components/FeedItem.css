@@ -38,8 +38,8 @@
 
 .FeedItem .card-img-overlay > .card-text {
   color: var(--color-white);
-  font-size: 0.7em;
-  padding: 0.5em;
+  font-size: 1em;
+  padding: 1em;
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -54,5 +54,10 @@
 @media (min-width: 768px) {
   .FeedItem {
     margin: 1.4rem;
+  }
+
+  .FeedItem .card-img-overlay > .card-text {
+    font-size: 0.7em;
+    padding: 0.5em 1em;
   }
 }
