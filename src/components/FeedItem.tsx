@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import MediaQuery from 'react-responsive';
+import { Card, Accordion } from 'react-bootstrap';
 import './FeedItem.css';
 import FeedModal from './FeedModal';
 
@@ -28,21 +29,36 @@ class FeedItem extends React.Component<Props, State> {
   render() {
     return (
       <>
-        <button onClick={this.modalShow} className="FeedItem" type="button">
-          <Card>
-            <Card.Img src={this.props.video.snippet.thumbnails.medium.url} />
-            <Card.ImgOverlay>
-              <Card.Text>{this.props.video.snippet.title}</Card.Text>
-            </Card.ImgOverlay>
+        <MediaQuery maxWidth={575.98}>
+          <Card className="FeedItem">
+            <Accordion.Toggle
+              as={Card.Img}
+              src={this.props.video.snippet.thumbnails.medium.url}
+              eventKey={this.props.videoId}
+            />
+            <Accordion.Collapse eventKey={this.props.videoId}>
+              <Card.Body>{this.props.video.snippet.title}</Card.Body>
+            </Accordion.Collapse>
           </Card>
-        </button>
+        </MediaQuery>
 
-        <FeedModal
-          show={this.state.show}
-          onHide={this.modalClose}
-          video={this.props.video}
-          videoId={this.props.videoId}
-        />
+        <MediaQuery minWidth={576}>
+          <button className="FeedItem" onClick={this.modalShow}>
+            <Card>
+              <Card.Img src={this.props.video.snippet.thumbnails.medium.url} />
+              <Card.ImgOverlay>
+                <Card.Text>{this.props.video.snippet.title}</Card.Text>
+              </Card.ImgOverlay>
+            </Card>
+          </button>
+
+          <FeedModal
+            show={this.state.show}
+            onHide={this.modalClose}
+            video={this.props.video}
+            videoId={this.props.videoId}
+          />
+        </MediaQuery>
       </>
     );
   }

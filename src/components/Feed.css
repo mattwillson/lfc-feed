@@ -11,13 +11,21 @@
   margin: 0;
 }
 
-.Feed > .container-fluid > .row > .col-12 {
-  padding: 0;
+.Feed > .container-fluid > .row > .accordion {
+  width: 100vw;
+}
+
+.Feed > .container-fluid > .row > .accordion > .col-12 {
+  padding: 2rem 4rem;
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .Feed > .container-fluid {
     padding: 1.4rem 0.6rem;
+  }
+
+  .Feed > .container-fluid > .row > .col-12 {
+    padding: 0;
   }
 }
