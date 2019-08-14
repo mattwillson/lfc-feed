@@ -1,6 +1,6 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
-import { Card, Accordion } from 'react-bootstrap';
+import { Card, ResponsiveEmbed, Accordion } from 'react-bootstrap';
 import './FeedItem.css';
 import FeedModal from './FeedModal';
 
@@ -18,6 +18,8 @@ class FeedItem extends React.Component<Props, State> {
     show: false
   };
 
+  videoSrc: string = `https://www.youtube.com/embed/${this.props.videoId}?modestbranding=1&rel=0`;
+
   modalClose = (): void => {
     this.setState({ show: false });
   };
@@ -31,14 +33,25 @@ class FeedItem extends React.Component<Props, State> {
       <>
         <MediaQuery maxWidth={575.98}>
           <Card className="FeedItem">
-            <Accordion.Toggle
-              as={Card.Img}
-              src={this.props.video.snippet.thumbnails.medium.url}
-              eventKey={this.props.videoId}
-            />
-            <Accordion.Collapse eventKey={this.props.videoId}>
+            <ResponsiveEmbed aspectRatio="16by9">
+              <iframe
+                src={this.videoSrc}
+                title="video player"
+                allowFullScreen
+              />
+            </ResponsiveEmbed>
+            <Accordion.Collapse
+              eventKey={this.props.video.snippet.position.toString()}
+            >
               <Card.Body>{this.props.video.snippet.title}</Card.Body>
             </Accordion.Collapse>
+            <Accordion.Toggle
+              as={Card.Footer}
+              className="text-muted"
+              eventKey={this.props.video.snippet.position.toString()}
+            >
+              Footer
+            </Accordion.Toggle>
           </Card>
         </MediaQuery>
 

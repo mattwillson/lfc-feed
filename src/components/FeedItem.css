@@ -1,4 +1,4 @@
-.FeedItem .card-img {
+.FeedItem .card-footer {
   cursor: pointer;
 }
 
@@ -20,6 +20,7 @@
   }
 
   .FeedItem .card-img {
+    cursor: pointer;
     border-radius: 0;
   }
 

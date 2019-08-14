@@ -22,7 +22,7 @@ const Feed = ({ videos }: Props): JSX.Element => {
       <Container fluid={true}>
         <MediaQuery maxWidth={575.98}>
           <Row>
-            <Accordion>{youtubeList}</Accordion>
+            <Accordion defaultActiveKey="0">{youtubeList}</Accordion>
           </Row>
         </MediaQuery>
         <MediaQuery minWidth={576}>
