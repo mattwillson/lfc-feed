@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import MediaQuery from 'react-responsive';
 import { Card, ResponsiveEmbed, Accordion } from 'react-bootstrap';
 import './FeedItem.css';
@@ -50,7 +51,14 @@ class FeedItem extends React.Component<Props, State> {
               className="text-muted"
               eventKey={this.props.video.snippet.position.toString()}
             >
-              Footer
+              <time
+                dateTime={this.props.video.snippet.publishedAt}
+                title={moment(this.props.video.snippet.publishedAt).format(
+                  'll'
+                )}
+              >
+                {moment(this.props.video.snippet.publishedAt).fromNow()}
+              </time>
             </Accordion.Toggle>
           </Card>
         </MediaQuery>
