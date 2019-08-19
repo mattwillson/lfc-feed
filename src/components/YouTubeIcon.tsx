@@ -11,13 +11,32 @@ class YouTubeIcon extends React.Component<Props, {}> {
   }
 
   handleClick = async () => {
-    const response = await youtube.get('/playlistItems', {
+    const response: any = await youtube.get('/playlistItems', {
       params: {
-        playlistId: 'UU9LQwHZoucFT94I2h6JOcjw'
+        playlistId: 'UU9LQwHZoucFT94I2h6JOcjw',
+        part: 'snippet',
+        maxResults: 24
       }
     });
 
-    this.props.onClick(response.data.items);
+    const uploads: object[] = response.data.items;
+
+    const mostRecentUploads: object[] = uploads.sort((a: any, b: any) => {
+      const videoA = a.snippet.publishedAt.toUpperCase();
+      const videoB = b.snippet.publishedAt.toUpperCase();
+
+      if (videoA > videoB) {
+        return -1;
+      }
+
+      if (videoA < videoB) {
+        return 1;
+      }
+
+      return 0;
+    });
+
+    this.props.onClick(mostRecentUploads);
   };
 
   render() {
