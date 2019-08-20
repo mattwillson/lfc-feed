@@ -1,6 +1,5 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
-import { Container, Row, Col, Accordion } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import './Feed.css';
 import FeedItem from './FeedItem';
 
@@ -20,14 +19,7 @@ const Feed = ({ videos }: Props): JSX.Element => {
   return (
     <div className="Feed">
       <Container fluid={true}>
-        <MediaQuery maxWidth={575.98}>
-          <Row>
-            <Accordion defaultActiveKey="0">{youtubeList}</Accordion>
-          </Row>
-        </MediaQuery>
-        <MediaQuery minWidth={576}>
-          <Row>{youtubeList}</Row>
-        </MediaQuery>
+        <Row>{youtubeList}</Row>
       </Container>
     </div>
   );
