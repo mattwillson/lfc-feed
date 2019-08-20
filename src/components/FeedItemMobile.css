@@ -2,6 +2,17 @@
   cursor: pointer;
 }
 
+.FeedItemMobile .card-body {
+  padding-bottom: 0;
+  color: var(--color-black);
+}
+
+.FeedItemMobile .card-footer {
+  border-top: 0;
+  background-color: var(--color-white);
+  color: var(--color-black-2);
+}
+
 .FeedItemMobile .card-footer > time {
   font-size: calc(5px + 2vmin);
   text-transform: uppercase;
