@@ -1,8 +1,8 @@
 import React from 'react';
-import moment from 'moment';
 import MediaQuery from 'react-responsive';
-import { Card, ResponsiveEmbed, Accordion } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import './FeedItem.css';
+import FeedItemMobile from './FeedItemMobile';
 import FeedModal from './FeedModal';
 
 type Props = {
@@ -19,8 +19,6 @@ class FeedItem extends React.Component<Props, State> {
     show: false
   };
 
-  videoSrc: string = `https://www.youtube.com/embed/${this.props.videoId}?modestbranding=1&rel=0`;
-
   modalClose = (): void => {
     this.setState({ show: false });
   };
@@ -33,34 +31,10 @@ class FeedItem extends React.Component<Props, State> {
     return (
       <>
         <MediaQuery maxWidth={575.98}>
-          <Card className="FeedItem">
-            <ResponsiveEmbed aspectRatio="16by9">
-              <iframe
-                src={this.videoSrc}
-                title="video player"
-                allowFullScreen
-              />
-            </ResponsiveEmbed>
-            <Accordion.Collapse
-              eventKey={this.props.video.snippet.position.toString()}
-            >
-              <Card.Body>{this.props.video.snippet.title}</Card.Body>
-            </Accordion.Collapse>
-            <Accordion.Toggle
-              as={Card.Footer}
-              className="text-muted"
-              eventKey={this.props.video.snippet.position.toString()}
-            >
-              <time
-                dateTime={this.props.video.snippet.publishedAt}
-                title={moment(this.props.video.snippet.publishedAt).format(
-                  'll'
-                )}
-              >
-                {moment(this.props.video.snippet.publishedAt).fromNow()}
-              </time>
-            </Accordion.Toggle>
-          </Card>
+          <FeedItemMobile
+            video={this.props.video}
+            videoId={this.props.videoId}
+          />
         </MediaQuery>
 
         <MediaQuery minWidth={576}>
