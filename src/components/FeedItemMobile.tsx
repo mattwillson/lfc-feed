@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import moment from 'moment';
 import { Card, Collapse, ResponsiveEmbed } from 'react-bootstrap';
+import './FeedItemMobile.css';
 
 type Props = { video: any; videoId: string };
 
@@ -10,7 +11,7 @@ const FeedItemMobile = ({ video, videoId }: Props): JSX.Element => {
   const videoSrc: string = `https://www.youtube.com/embed/${videoId}?modestbranding=1&rel=0`;
 
   return (
-    <Card className="FeedItem">
+    <Card className="FeedItemMobile">
       <Collapse in={!open}>
         <div>
           <Card.Img

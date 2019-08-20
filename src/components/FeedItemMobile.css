@@ -1,0 +1,8 @@
+.FeedItemMobile {
+  cursor: pointer;
+}
+
+.FeedItemMobile .card-footer > time {
+  font-size: calc(5px + 2vmin);
+  text-transform: uppercase;
+}
