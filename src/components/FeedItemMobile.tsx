@@ -20,7 +20,7 @@ const FeedItemMobile = ({ video, videoId }: Props): JSX.Element => {
           />
         </div>
       </Collapse>
-      <Collapse in={open} mountOnEnter={true}>
+      <Collapse in={open} mountOnEnter={true} unmountOnExit={true}>
         <div>
           <ResponsiveEmbed aspectRatio="16by9">
             <iframe src={videoSrc} title="video player" />
