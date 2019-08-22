@@ -3,6 +3,10 @@
   line-height: 1.2;
 }
 
+.FeedItemMobile iframe {
+  border-radius: calc(0.25rem - 1px);
+}
+
 .FeedItemMobile .card-body {
   padding-bottom: 0;
 }
