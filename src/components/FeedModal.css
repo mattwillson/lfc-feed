@@ -1,11 +1,12 @@
 .FeedModal {
-  max-width: 934px;
+  width: calc(100% - 8rem);
+  max-width: 975px;
+  justify-content: center;
 }
 
 .FeedModal > .modal-content {
   border: 0;
   border-radius: 0;
-  margin: 0 4rem;
 }
 
 .FeedModal .modal-body {
@@ -17,19 +18,5 @@
   border-top: 0;
   border-radius: 0;
   background-color: var(--color-white);
-  color: var(--color-black-2);
-}
-
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-  .FeedModal {
-    margin: 0.5rem 0;
-  }
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-  .FeedModal > .modal-content {
-    margin: 0;
-  }
+  color: var(--color-black);
 }
