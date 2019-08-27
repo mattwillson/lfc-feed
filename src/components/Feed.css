@@ -1,7 +1,7 @@
 .Feed {
   width: calc(100% - 8rem);
   max-width: 975px;
-  margin: 0 4rem;
+  margin: 2rem 4rem;
   background-color: var(--color-white-2);
 }
 
