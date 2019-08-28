@@ -45,10 +45,7 @@ const FeedItem = ({ video, videoId }: Props): JSX.Element => {
         <Card>
           <Collapse in={!openCard}>
             <div>
-              <Card.Img
-                onClick={handleClick}
-                src={video.snippet.thumbnails.medium.url}
-              />
+              <Card.Img src={video.snippet.thumbnails.medium.url} />
               <Card.ImgOverlay>
                 <Card.Text>{video.snippet.title}</Card.Text>
               </Card.ImgOverlay>
@@ -59,7 +56,7 @@ const FeedItem = ({ video, videoId }: Props): JSX.Element => {
               <ResponsiveEmbed aspectRatio="16by9">
                 <iframe src={videoSrc} title="video player" allowFullScreen />
               </ResponsiveEmbed>
-              <Card.Body onClick={handleClick}>
+              <Card.Body>
                 <Card.Title>{video.snippet.title}</Card.Title>
                 <Card.Text>
                   <span>
@@ -70,7 +67,7 @@ const FeedItem = ({ video, videoId }: Props): JSX.Element => {
               </Card.Body>
             </div>
           </Collapse>
-          <Card.Footer onClick={handleClick}>
+          <Card.Footer>
             <time
               dateTime={video.snippet.publishedAt}
               title={moment(video.snippet.publishedAt).format('ll')}
