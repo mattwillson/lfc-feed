@@ -2,7 +2,7 @@ a.Logo {
   display: flex;
   align-items: center;
   color: var(--color-primary);
-  outline-color: var(--color-primary);
+  outline-color: var(--color-secondary);
   text-decoration: none;
   line-height: 1;
   font-size: 3.2rem;
