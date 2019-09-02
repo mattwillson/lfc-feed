@@ -1,0 +1,83 @@
+.VideoInfo {
+  width: 100%;
+  padding: 1.25rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-white);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.VideoInfo > h1,
+.VideoInfo > span {
+  padding-bottom: 1rem;
+}
+
+.VideoInfo > h1 {
+  margin: 0;
+  color: var(--color-black);
+  font-size: calc(10px + 2vmin);
+}
+
+.VideoInfo > .progress {
+  margin-bottom: 1.25rem;
+  background-color: var(--color-primary);
+}
+
+.VideoInfo .progress-bar {
+  background-color: var(--color-secondary);
+}
+
+.VideoInfo > span {
+  color: var(--color-black-2);
+  font-size: calc(7px + 2vmin);
+}
+
+.VideoInfo > time {
+  color: var(--color-gray-dark);
+  font-size: calc(5px + 2vmin);
+  text-transform: uppercase;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .VideoInfo {
+    width: 50%;
+    max-width: 306.33px;
+    border: 0;
+  }
+
+  .VideoInfo > h1 {
+    font-size: calc(2px + 2vmin);
+  }
+
+  .VideoInfo > span {
+    font-size: 2vmin;
+  }
+
+  .VideoInfo > time {
+    font-size: calc(-2px + 2vmin);
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .VideoInfo > span {
+    font-size: calc(-1px + 2vmin);
+  }
+
+  .VideoInfo > time {
+    font-size: calc(-3px + 2vmin);
+  }
+
+  .VideoInfo > h1,
+  .VideoInfo > span {
+    padding-bottom: 1.5rem;
+  }
+
+  .VideoInfo > .progress {
+    margin-bottom: 1.75rem;
+  }
+}

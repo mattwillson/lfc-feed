@@ -11,16 +11,18 @@
   outline-color: var(--color-secondary);
 }
 
-.FeedItem > .card {
-  text-align: left;
-  line-height: 1.2;
+.FeedItem .card-img,
+.FeedItem iframe {
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .FeedItem .card-img-overlay {
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   text-align: center;
   opacity: 0;
@@ -36,27 +38,9 @@
   font-size: 0.6em;
 }
 
-.FeedItem iframe {
-  border-radius: calc(0.25rem - 1px);
-}
-
-.FeedItem .card-body {
-  padding-bottom: 0;
-}
-
-.FeedItem .card-title {
-  color: var(--color-black);
-  font-size: calc(10px + 2vmin);
-}
-
-.FeedItem .card-text > span {
-  color: var(--color-black-2);
-  font-size: calc(7px + 2vmin);
-}
-
 .FeedItem .card-footer {
-  border-top: 0;
   background-color: var(--color-white);
+  text-align: center;
 }
 
 .FeedItem .card-footer > time {
@@ -82,11 +66,12 @@
     border: 0;
   }
 
-  .FeedItem .card-img {
+  .FeedItem .card-img,
+  .FeedItem iframe {
     border-radius: 0;
   }
 
-  .FeedItem .card-body,
+  .FeedItem .VideoInfo,
   .FeedItem .card-footer {
     display: none;
   }
