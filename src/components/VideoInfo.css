@@ -81,3 +81,18 @@
     margin-bottom: 1.75rem;
   }
 }
+
+/* Small landscape devices */
+@media (min-width: 576px) and (max-height: 600px) and (orientation: landscape) {
+  .VideoInfo > h1 {
+    font-size: calc(8px + 2vmin);
+  }
+
+  .VideoInfo > span {
+    font-size: calc(5px + 2vmin);
+  }
+
+  .VideoInfo > time {
+    font-size: calc(3px + 2vmin);
+  }
+}
