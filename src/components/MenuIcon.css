@@ -2,6 +2,9 @@
   height: 2.4rem;
   padding: 0;
   border: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   background-color: transparent;
 }
 

@@ -1,6 +1,9 @@
 a.LFCIcon {
   height: 2.4rem;
   margin-left: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   outline-color: var(--color-secondary);
 }
 
