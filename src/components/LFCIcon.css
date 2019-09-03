@@ -1,5 +1,6 @@
 a.LFCIcon {
   height: 2.4rem;
+  margin-left: 3px;
   outline-color: var(--color-secondary);
 }
 
