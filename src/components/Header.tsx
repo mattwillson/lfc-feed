@@ -1,24 +1,18 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import './Header.css';
-import Logo from './Logo';
-import SocialIcons from './SocialIcons';
+import LFCIcon from './LFCIcon';
+import Title from './Title';
+import MenuIcon from './MenuIcon';
 
-type Props = {
-  onYoutubeClick: (videos: object[]) => void;
-};
-
-class Header extends React.Component<Props, {}> {
-  onYoutubeClick = (videos: object[]): void => {
-    this.props.onYoutubeClick(videos);
-  };
-
+class Header extends React.Component {
   render() {
     return (
       <header className="Header">
         <Container>
-          <Logo />
-          <SocialIcons onYoutubeClick={this.onYoutubeClick} />
+          <LFCIcon />
+          <Title />
+          <MenuIcon />
         </Container>
       </header>
     );

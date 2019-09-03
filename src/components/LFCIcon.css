@@ -1,5 +1,13 @@
-.LFCIcon {
+a.LFCIcon {
+  height: 2.4rem;
+  outline-color: var(--color-secondary);
+}
+
+.LFCIcon > svg {
   width: auto;
-  height: 3.2rem;
-  margin-right: 0.8rem;
+  height: 2.4rem;
+}
+
+.LFCIcon > svg > path {
+  fill: var(--color-primary);
 }

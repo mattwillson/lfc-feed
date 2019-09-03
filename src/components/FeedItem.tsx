@@ -17,7 +17,7 @@ const FeedItem = ({ video, videoId }: Props): JSX.Element => {
 
   const videoSrc: string = `https://www.youtube.com/embed/${videoId}?modestbranding=1&rel=0`;
 
-  const getStats: () => Promise<void> = async () => {
+  const getVideoStats: () => Promise<void> = async () => {
     const response = await youtube.get('/videos', {
       params: {
         playlistId: 'UU9LQwHZoucFT94I2h6JOcjw',
@@ -34,11 +34,11 @@ const FeedItem = ({ video, videoId }: Props): JSX.Element => {
   const handleClick: () => void = () => {
     if (window.matchMedia('(max-width: 575.98px)').matches) {
       if (!openCard) {
-        getStats();
+        getVideoStats();
       }
       setOpen(!openCard);
     } else {
-      getStats();
+      getVideoStats();
       setShow(!showModal);
     }
   };

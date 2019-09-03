@@ -1,0 +1,14 @@
+.MenuIcon {
+  height: 2.4rem;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.MenuIcon:focus {
+  outline-color: var(--color-secondary);
+}
+
+.MenuIcon > svg > path {
+  fill: var(--color-primary);
+}
