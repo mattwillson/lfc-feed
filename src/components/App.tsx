@@ -22,7 +22,7 @@ class App extends React.Component<{}, State> {
       params: {
         playlistId: 'UU9LQwHZoucFT94I2h6JOcjw',
         part: 'snippet',
-        maxResults: 27
+        maxResults: 30
       }
     });
 
