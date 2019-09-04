@@ -15,6 +15,8 @@ const FeedItem = ({ video, videoId }: Props): JSX.Element => {
   const [likes, setLikes] = useState(0);
   const [dislikes, setDislikes] = useState(0);
 
+  const mql: MediaQueryList = window.matchMedia('(max-width: 575.98px)');
+
   const videoSrc: string = `https://www.youtube.com/embed/${videoId}?modestbranding=1&rel=0`;
 
   const getVideoStats: () => Promise<void> = async () => {
@@ -32,12 +34,14 @@ const FeedItem = ({ video, videoId }: Props): JSX.Element => {
   };
 
   const handleClick: () => void = () => {
-    if (window.matchMedia('(max-width: 575.98px)').matches) {
+    if (mql.matches) {
+      // the viewport is 575.98 pixels wide or less
       if (!openCard) {
         getVideoStats();
       }
       setOpen(!openCard);
     } else {
+      // the viewport is more than 575.98 pixels wide
       getVideoStats();
       setShow(!showModal);
     }
