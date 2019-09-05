@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import moment from 'moment';
-import { Card, Collapse, ResponsiveEmbed } from 'react-bootstrap';
+import { Card, Collapse } from 'react-bootstrap';
 import './FeedItem.css';
 import youtube from '../api/youtube';
+import VideoEmbed from './VideoEmbed';
 import VideoInfo from './VideoInfo';
 import FeedModal from './FeedModal';
 
@@ -16,8 +17,6 @@ const FeedItem = ({ video, videoId }: Props): JSX.Element => {
   const [dislikes, setDislikes] = useState(0);
 
   const mql: MediaQueryList = window.matchMedia('(max-width: 575.98px)');
-
-  const videoSrc: string = `https://www.youtube.com/embed/${videoId}?modestbranding=1&rel=0`;
 
   const getVideoStats: () => Promise<void> = async () => {
     const response = await youtube.get('/videos', {
@@ -64,9 +63,7 @@ const FeedItem = ({ video, videoId }: Props): JSX.Element => {
           </Collapse>
           <Collapse in={openCard} mountOnEnter={true} unmountOnExit={true}>
             <div>
-              <ResponsiveEmbed aspectRatio="16by9">
-                <iframe src={videoSrc} title="video player" allowFullScreen />
-              </ResponsiveEmbed>
+              <VideoEmbed videoId={videoId} />
               <VideoInfo
                 views={views}
                 likes={likes}

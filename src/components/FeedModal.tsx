@@ -1,6 +1,7 @@
 import React from 'react';
-import { Modal, ResponsiveEmbed } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import './FeedModal.css';
+import VideoEmbed from './VideoEmbed';
 import VideoInfo from './VideoInfo';
 
 type Props = {
@@ -14,8 +15,6 @@ type Props = {
 };
 
 class FeedModal extends React.Component<Props, {}> {
-  videoSrc: string = `https://www.youtube.com/embed/${this.props.videoId}?modestbranding=1&rel=0`;
-
   render() {
     return (
       <Modal
@@ -26,9 +25,7 @@ class FeedModal extends React.Component<Props, {}> {
         restoreFocus
       >
         <Modal.Body>
-          <ResponsiveEmbed aspectRatio="16by9">
-            <iframe src={this.videoSrc} title="video player" allowFullScreen />
-          </ResponsiveEmbed>
+          <VideoEmbed videoId={this.props.videoId} />
           <VideoInfo
             views={this.props.views}
             likes={this.props.likes}
