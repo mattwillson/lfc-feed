@@ -4,7 +4,7 @@ import FeedItem from './FeedItem';
 
 type Props = { videos: object[] };
 
-const Feed = ({ videos }: Props): JSX.Element => {
+const Feed = ({ videos }: Props) => {
   const youtubeList: JSX.Element[] = videos.map((video: any) => {
     const id: string = video.snippet.resourceId.videoId;
 

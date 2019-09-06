@@ -4,7 +4,7 @@ import YouTube from 'react-youtube';
 
 type Props = { videoId: string };
 
-const VideoEmbed = ({ videoId }: Props): JSX.Element => {
+const VideoEmbed = ({ videoId }: Props) => {
   const opts: any = {
     playerVars: {
       modestbranding: 1,

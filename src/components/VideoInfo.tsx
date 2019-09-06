@@ -10,7 +10,7 @@ type Props = {
   video: any;
 };
 
-const VideoInfo = ({ views, likes, dislikes, video }: Props): JSX.Element => {
+const VideoInfo = ({ views, likes, dislikes, video }: Props) => {
   const addCommas: (x: number) => string = (x: number) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };

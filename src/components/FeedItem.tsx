@@ -9,7 +9,7 @@ import FeedModal from './FeedModal';
 
 type Props = { video: any; videoId: string };
 
-const FeedItem = ({ video, videoId }: Props): JSX.Element => {
+const FeedItem = ({ video, videoId }: Props) => {
   const [openCard, setOpen] = useState(false);
   const [showModal, setShow] = useState(false);
   const [views, setViews] = useState(0);

@@ -14,28 +14,34 @@ type Props = {
   videoId: string;
 };
 
-class FeedModal extends React.Component<Props, {}> {
-  render() {
-    return (
-      <Modal
-        show={this.props.show}
-        onHide={this.props.onHide}
-        dialogClassName="FeedModal"
-        centered
-        restoreFocus
-      >
-        <Modal.Body>
-          <VideoEmbed videoId={this.props.videoId} />
-          <VideoInfo
-            views={this.props.views}
-            likes={this.props.likes}
-            dislikes={this.props.dislikes}
-            video={this.props.video}
-          />
-        </Modal.Body>
-      </Modal>
-    );
-  }
-}
+const FeedModal = ({
+  show,
+  onHide,
+  views,
+  likes,
+  dislikes,
+  video,
+  videoId
+}: Props) => {
+  return (
+    <Modal
+      show={show}
+      onHide={onHide}
+      dialogClassName="FeedModal"
+      centered
+      restoreFocus
+    >
+      <Modal.Body>
+        <VideoEmbed videoId={videoId} />
+        <VideoInfo
+          views={views}
+          likes={likes}
+          dislikes={dislikes}
+          video={video}
+        />
+      </Modal.Body>
+    </Modal>
+  );
+};
 
 export default FeedModal;
