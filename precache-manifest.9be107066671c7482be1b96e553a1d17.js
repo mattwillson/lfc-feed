@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b0cdff3b6e7b439a463aeb6454501117",
+    "revision": "b5385e1aa414d31c30bdd316779de36f",
     "url": "/lfc-feed/index.html"
   },
   {
