@@ -43,6 +43,8 @@ class App extends React.Component<{}, State> {
       return 0;
     });
 
+    console.log('get videos');
+
     this.setState({ videos: mostRecentUploads });
   };
 
