@@ -11,7 +11,7 @@ type Props = { video: any; videoId: string };
 
 const FeedItem = ({ video, videoId }: Props) => {
   const [openCard, setOpen] = useState(false);
-  const [showModal, setShow] = useState(false);
+  const [modalShow, setModalShow] = useState(false);
   const [views, setViews] = useState(0);
   const [likes, setLikes] = useState(0);
   const [dislikes, setDislikes] = useState(0);
@@ -42,7 +42,7 @@ const FeedItem = ({ video, videoId }: Props) => {
     } else {
       // the viewport is more than 575.98 pixels wide
       getVideoStats();
-      setShow(!showModal);
+      setModalShow(true);
     }
   };
 
@@ -88,9 +88,9 @@ const FeedItem = ({ video, videoId }: Props) => {
       </button>
 
       <FeedModal
-        show={showModal}
+        show={modalShow}
         onHide={(): void => {
-          setShow(!showModal);
+          setModalShow(false);
         }}
         views={views}
         likes={likes}
