@@ -10,7 +10,8 @@ import FeedModal from './FeedModal';
 type Props = { video: any; videoId: string };
 
 const FeedItem = ({ video, videoId }: Props) => {
-  const [cardOpen, setCardOpen] = useState(false);
+  const [imageShow, setImageShow] = useState(true);
+  const [videoShow, setVideoShow] = useState(false);
   const [modalShow, setModalShow] = useState(false);
   const [views, setViews] = useState(0);
   const [likes, setLikes] = useState(0);
@@ -35,11 +36,13 @@ const FeedItem = ({ video, videoId }: Props) => {
   const handleClick: () => void = () => {
     if (mql.matches) {
       // the viewport is 575.98 pixels wide or less
-      if (!cardOpen) {
+      if (imageShow) {
         getVideoStats();
-        setCardOpen(true);
+        setImageShow(false);
+        setVideoShow(true);
       } else {
-        setCardOpen(false);
+        setVideoShow(false);
+        setImageShow(true);
       }
     } else {
       // the viewport is more than 575.98 pixels wide
@@ -52,7 +55,7 @@ const FeedItem = ({ video, videoId }: Props) => {
     <>
       <button className="FeedItem" onClick={handleClick}>
         <Card>
-          <Collapse in={!cardOpen}>
+          <Collapse in={imageShow}>
             <div>
               <Card.Img
                 src={video.snippet.thumbnails.medium.url}
@@ -63,7 +66,7 @@ const FeedItem = ({ video, videoId }: Props) => {
               </Card.ImgOverlay>
             </div>
           </Collapse>
-          <Collapse in={cardOpen} mountOnEnter={true} unmountOnExit={true}>
+          <Collapse in={videoShow} mountOnEnter={true} unmountOnExit={true}>
             <div>
               <VideoEmbed videoId={videoId} />
               <VideoInfo
@@ -74,7 +77,7 @@ const FeedItem = ({ video, videoId }: Props) => {
               />
             </div>
           </Collapse>
-          <Collapse in={!cardOpen}>
+          <Collapse in={imageShow}>
             <div>
               <Card.Footer>
                 <time
