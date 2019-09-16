@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/lfc-feed/static/css/main.07ed8122.chunk.css",
-    "main.js": "/lfc-feed/static/js/main.93272b4e.chunk.js",
-    "main.js.map": "/lfc-feed/static/js/main.93272b4e.chunk.js.map",
+    "main.css": "/lfc-feed/static/css/main.efda9519.chunk.css",
+    "main.js": "/lfc-feed/static/js/main.c6443dbe.chunk.js",
+    "main.js.map": "/lfc-feed/static/js/main.c6443dbe.chunk.js.map",
     "runtime~main.js": "/lfc-feed/static/js/runtime~main.e23370a2.js",
     "runtime~main.js.map": "/lfc-feed/static/js/runtime~main.e23370a2.js.map",
-    "static/js/2.eef2dd39.chunk.js": "/lfc-feed/static/js/2.eef2dd39.chunk.js",
-    "static/js/2.eef2dd39.chunk.js.map": "/lfc-feed/static/js/2.eef2dd39.chunk.js.map",
+    "static/js/2.a790a5a6.chunk.js": "/lfc-feed/static/js/2.a790a5a6.chunk.js",
+    "static/js/2.a790a5a6.chunk.js.map": "/lfc-feed/static/js/2.a790a5a6.chunk.js.map",
     "index.html": "/lfc-feed/index.html",
-    "precache-manifest.68edb03eb8d73b57e26fc990fd8212c9.js": "/lfc-feed/precache-manifest.68edb03eb8d73b57e26fc990fd8212c9.js",
+    "precache-manifest.2726500eb75dc752fb7f5ba3a6d2a050.js": "/lfc-feed/precache-manifest.2726500eb75dc752fb7f5ba3a6d2a050.js",
     "service-worker.js": "/lfc-feed/service-worker.js",
-    "static/css/main.07ed8122.chunk.css.map": "/lfc-feed/static/css/main.07ed8122.chunk.css.map",
+    "static/css/main.efda9519.chunk.css.map": "/lfc-feed/static/css/main.efda9519.chunk.css.map",
     "static/media/index.css": "/lfc-feed/static/media/AlbertusMTPro.ded4d968.woff2"
   }
 }
