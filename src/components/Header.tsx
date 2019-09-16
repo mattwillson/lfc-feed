@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import './Header.css';
 import LFCIcon from './LFCIcon';
 import Title from './Title';
-import MenuIcon from './MenuIcon';
+import ThemeSwitch from './ThemeSwitch';
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
       <Container>
         <LFCIcon />
         <Title />
-        <MenuIcon />
+        <ThemeSwitch />
       </Container>
     </header>
   );
