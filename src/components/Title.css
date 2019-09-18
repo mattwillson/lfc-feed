@@ -1,7 +1,7 @@
 a.Title {
   padding-top: 3px;
   padding-right: 1px;
-  margin-left: 12px;
+  margin: 12px;
   color: var(--color-primary);
   outline-color: var(--color-secondary);
   text-decoration: none;

@@ -1,0 +1,18 @@
+.MenuIcon {
+  padding: 0;
+  border: 0;
+  margin: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.MenuIcon:focus {
+  outline-color: var(--color-secondary);
+}
+
+.MenuIcon > svg {
+  font-size: 28px;
+}
