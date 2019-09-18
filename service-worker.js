@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/lfc-feed/precache-manifest.055b6d7d94afbbe04f7b00788e9ff227.js"
+  "/lfc-feed/precache-manifest.39d54b3c352755e42a6cc04d1930e367.js"
 );
 
 self.addEventListener('message', (event) => {
