@@ -3,14 +3,25 @@ import './App.css';
 import Header from './Header';
 import Feed from './Feed';
 import youtube from '../api/youtube';
+import { ThemeContext, themes } from '../theme-context';
 
 type State = {
   videos: object[];
+  theme: any;
+  toggleTheme: () => void;
 };
 
 class App extends React.Component<{}, State> {
+  toggleTheme = () => {
+    this.setState(state => ({
+      theme: state.theme === themes.dark ? themes.light : themes.dark
+    }));
+  };
+
   state: State = {
-    videos: []
+    videos: [],
+    theme: themes.light,
+    toggleTheme: this.toggleTheme
   };
 
   componentDidMount() {
@@ -50,10 +61,15 @@ class App extends React.Component<{}, State> {
 
   render() {
     return (
-      <div className="App">
-        <Header />
-        <Feed videos={this.state.videos} />
-      </div>
+      <ThemeContext.Provider value={this.state}>
+        <div
+          className="App"
+          style={{ backgroundColor: this.state.theme.background }}
+        >
+          <Header />
+          <Feed videos={this.state.videos} />
+        </div>
+      </ThemeContext.Provider>
     );
   }
 }

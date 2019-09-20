@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import moment from 'moment';
 import { Card, Collapse } from 'react-bootstrap';
 import './FeedItem.css';
@@ -6,10 +6,13 @@ import youtube from '../api/youtube';
 import VideoEmbed from './VideoEmbed';
 import VideoInfo from './VideoInfo';
 import FeedModal from './FeedModal';
+import { ThemeContext } from '../theme-context';
 
 type Props = { video: any; videoId: string };
 
 const FeedItem = ({ video, videoId }: Props) => {
+  const { theme } = useContext(ThemeContext);
+
   const [imageShow, setImageShow] = useState(true);
   const [videoShow, setVideoShow] = useState(false);
   const [modalShow, setModalShow] = useState(false);
@@ -54,7 +57,7 @@ const FeedItem = ({ video, videoId }: Props) => {
   return (
     <>
       <button className="FeedItem" onClick={handleClick}>
-        <Card>
+        <Card style={{ borderColor: theme.border }}>
           <Collapse in={imageShow}>
             <div>
               <Card.Img
@@ -79,7 +82,7 @@ const FeedItem = ({ video, videoId }: Props) => {
           </Collapse>
           <Collapse in={imageShow}>
             <div>
-              <Card.Footer>
+              <Card.Footer style={{ backgroundColor: theme.background_2 }}>
                 <time
                   dateTime={video.snippet.publishedAt}
                   title={moment(video.snippet.publishedAt).format('ll')}
