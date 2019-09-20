@@ -2,7 +2,6 @@
   width: calc(100% - 8rem);
   max-width: 975px;
   margin: 2rem 4rem;
-  background-color: var(--color-white-2);
 }
 
 /* Small devices (landscape phones, 576px and up) */

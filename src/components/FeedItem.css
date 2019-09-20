@@ -8,7 +8,7 @@
 }
 
 .FeedItem:focus {
-  outline-color: var(--color-secondary);
+  outline-color: var(--secondary);
 }
 
 .FeedItem .card-img,
@@ -34,17 +34,17 @@
 }
 
 .FeedItem .card-img-overlay > .card-text {
-  color: var(--color-white);
+  color: var(--white);
   font-size: 0.6em;
 }
 
 .FeedItem .card-footer {
-  background-color: var(--color-white);
+  background-color: var(--white);
   text-align: center;
 }
 
 .FeedItem .card-footer > time {
-  color: var(--color-gray-dark);
+  color: var(--darkgray);
   font-size: calc(5px + 2vmin);
   text-transform: uppercase;
 }

@@ -6,11 +6,11 @@
   flex-direction: row;
   align-items: center;
   background-color: transparent;
-  color: var(--color-primary);
+  color: var(--primary);
 }
 
 .MenuIcon:focus {
-  outline-color: var(--color-secondary);
+  outline-color: var(--secondary);
 }
 
 .MenuIcon > svg {

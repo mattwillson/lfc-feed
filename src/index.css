@@ -3,20 +3,20 @@
 
 :root {
   font-size: 62.5%; /* 1rem = 10px */
-  --color-primary: #d10122; /* crimson */
-  --color-secondary: #00a599; /* darkcyan */
-  --color-tertiary: #fef667; /* khaki */
-  --color-gray-light: #ccc; /* lightgray */
-  --color-gray-dark: #999; /* darkgray */
-  --color-white: #fff; /* white */
-  --color-white-2: #fafafa; /* snow */
-  --color-black: #000; /* black */
-  --color-black-2: #262626; /* darkslategray */
+  --primary: #d10122; /* crimson */
+  --secondary: #00a599; /* darkcyan */
+  --tertiary: #fef667; /* khaki */
+  --white: #fff;
+  --snow: #fafafa;
+  --black: #000;
+  --black-2: #222222;
+  --darkgray: #999;
+  --darkslategray: #262626;
 }
 
 ::selection {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: var(--primary);
+  color: var(--white);
 }
 
 @font-face {
@@ -29,7 +29,6 @@
 }
 
 body {
-  background-color: var(--color-white-2);
   margin: 0;
   line-height: 1.5;
   font-family: 'Albertus MT', serif; /* TODO: add backup fonts */
