@@ -1,36 +1,72 @@
 import React, { useContext } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Switch from '@material-ui/core/Switch';
+import { withStyles, Theme, createStyles } from '@material-ui/core/styles';
+import Switch, { SwitchClassKey, SwitchProps } from '@material-ui/core/Switch';
+import './ThemeSwitch.css';
 import { ThemeContext } from '../theme-context';
 
-const ThemeSwitch = () => {
-  const { toggleTheme } = useContext(ThemeContext);
+interface Styles extends Partial<Record<SwitchClassKey, string>> {
+  focusVisible?: string;
+}
 
-  const useStyles = makeStyles({
+interface Props extends SwitchProps {
+  classes: Styles;
+}
+
+const ThemeSwitch = withStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      width: 50,
+      height: 24,
+      padding: 0,
+      overflow: 'visible'
+    },
     switchBase: {
-      '&$checked + $track': {
-        opacity: 1
+      padding: 1,
+      '&$checked': {
+        transform: 'translateX(26px)',
+        '& + $track': {
+          backgroundColor: '#121212',
+          opacity: 1,
+          border: 'none'
+        }
+      },
+      '&$focusVisible $thumb': {
+        boxShadow: '0 0 2px 3px #00a599'
       }
     },
-    checked: {},
+    thumb: {
+      width: 22,
+      height: 22,
+      backgroundColor: '#fafafa'
+    },
     track: {
-      opacity: 1
-    }
-  });
-
-  const classes = useStyles();
+      borderRadius: 24 / 2,
+      border: `1px solid #121212`,
+      backgroundColor: '#121212',
+      opacity: 1,
+      transition: theme.transitions.create(['background-color', 'border'])
+    },
+    checked: {},
+    focusVisible: {}
+  })
+)(({ classes }: Props) => {
+  const { toggleTheme } = useContext(ThemeContext);
 
   return (
     <Switch
+      className="ThemeSwitch"
       onChange={toggleTheme}
+      disableRipple
+      focusVisibleClassName={classes.focusVisible}
       classes={{
+        root: classes.root,
         switchBase: classes.switchBase,
-        checked: classes.checked,
-        track: classes.track
+        thumb: classes.thumb,
+        track: classes.track,
+        checked: classes.checked
       }}
-      color="default"
     />
   );
-};
+});
 
 export default ThemeSwitch;

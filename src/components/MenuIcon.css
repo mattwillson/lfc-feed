@@ -1,7 +1,8 @@
 .MenuIcon {
   padding: 0;
   border: 0;
-  margin: 12px;
+  margin: 0;
+  margin-right: 16px;
   display: flex;
   flex-direction: row;
   align-items: center;

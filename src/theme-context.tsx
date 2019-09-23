@@ -12,7 +12,7 @@ export const themes = {
     foreground: '#ffffff',
     background: '#121212',
     background_2: '#262626',
-    primary: '#ffffff',
+    primary: '#fafafa',
     border: '#000000'
   }
 };
