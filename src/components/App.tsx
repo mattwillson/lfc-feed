@@ -13,6 +13,12 @@ type State = {
 
 class App extends React.Component<{}, State> {
   toggleTheme = () => {
+    if (this.state.theme === themes.light) {
+      document.body.style.backgroundColor = '#121212';
+    } else {
+      document.body.style.backgroundColor = '#fafafa';
+    }
+
     this.setState(state => ({
       theme: state.theme === themes.dark ? themes.light : themes.dark
     }));
