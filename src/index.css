@@ -29,6 +29,7 @@
 }
 
 body {
+  background-color: var(--snow);
   margin: 0;
   line-height: 1.5;
   font-family: 'Albertus MT', serif; /* TODO: add backup fonts */
