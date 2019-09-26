@@ -2,13 +2,16 @@ import React, { useContext, useState } from 'react';
 import moment from 'moment';
 import { Card, Collapse } from 'react-bootstrap';
 import './FeedItem.css';
-import youtube from '../api/youtube';
 import VideoEmbed from './VideoEmbed';
 import VideoInfo from './VideoInfo';
 import FeedModal from './FeedModal';
+import youtube from '../api/youtube';
 import { ThemeContext } from '../theme-context';
 
-type Props = { video: any; videoId: string };
+type Props = {
+  video: any;
+  videoId: string;
+};
 
 const FeedItem = ({ video, videoId }: Props) => {
   const { theme } = useContext(ThemeContext);
@@ -31,9 +34,11 @@ const FeedItem = ({ video, videoId }: Props) => {
       }
     });
 
-    setViews(response.data.items[0].statistics.viewCount);
-    setLikes(response.data.items[0].statistics.likeCount);
-    setDislikes(response.data.items[0].statistics.dislikeCount);
+    const stats: any = response.data.items[0].statistics;
+
+    setViews(stats.viewCount);
+    setLikes(stats.likeCount);
+    setDislikes(stats.dislikeCount);
   };
 
   const handleClick: () => void = () => {
