@@ -11,7 +11,6 @@
 
 - React
 - Bootstrap
-- Material-UI
 
 ### Bundler
 
