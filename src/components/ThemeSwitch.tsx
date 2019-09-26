@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import Toggle from 'react-toggle';
-import 'react-toggle/style.css';
 import './ThemeSwitch.css';
+import MoonIcon from './MoonIcon';
+import SunIcon from './SunIcon';
 import { ThemeContext } from '../theme-context';
 
 const ThemeSwitch = () => {
@@ -12,6 +13,10 @@ const ThemeSwitch = () => {
       className="ThemeSwitch"
       onChange={toggleTheme}
       defaultChecked={false}
+      icons={{
+        checked: <MoonIcon />,
+        unchecked: <SunIcon />
+      }}
     />
   );
 };
