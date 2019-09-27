@@ -4,7 +4,7 @@ a.LFCIcon {
   display: flex;
   flex-direction: row;
   align-items: center;
-  outline-color: var(--secondary);
+  outline-color: var(--primary);
 }
 
 .LFCIcon > svg {

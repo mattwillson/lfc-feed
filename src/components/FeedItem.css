@@ -8,7 +8,7 @@
 }
 
 .FeedItem:focus {
-  outline-color: var(--secondary);
+  outline-color: var(--primary);
 }
 
 .FeedItem .card-img,

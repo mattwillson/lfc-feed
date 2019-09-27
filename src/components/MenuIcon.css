@@ -11,7 +11,7 @@
 }
 
 .MenuIcon:focus {
-  outline-color: var(--secondary);
+  outline-color: var(--primary);
 }
 
 .MenuIcon > svg {
