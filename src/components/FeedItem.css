@@ -39,12 +39,11 @@
 }
 
 .FeedItem .card-footer {
-  background-color: var(--white);
   text-align: center;
 }
 
 .FeedItem .card-footer > time {
-  color: var(--darkgray);
+  color: var(--dimgray);
   font-size: calc(5px + 2vmin);
   text-transform: uppercase;
 }

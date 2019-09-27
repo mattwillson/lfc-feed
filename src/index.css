@@ -8,10 +8,9 @@
   --tertiary: #fef667; /* khaki */
   --white: #fff;
   --snow: #fafafa;
-  --black: #000;
-  --black-2: #222222;
-  --darkgray: #999;
+  --dimgray: #666;
   --darkslategray: #262626;
+  --black: #121212;
 }
 
 ::selection {

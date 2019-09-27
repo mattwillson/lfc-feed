@@ -7,7 +7,7 @@
   flex-direction: row;
   align-items: center;
   background-color: transparent;
-  color: var(--primary);
+  color: var(--black);
 }
 
 .MenuIcon:focus {
