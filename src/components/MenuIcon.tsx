@@ -7,7 +7,7 @@ const MenuIcon = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <button className="MenuIcon" style={{ color: theme.primary }}>
+    <button className="MenuIcon" style={{ color: theme.Header_foreground }}>
       <MenuRoundedIcon />
     </button>
   );

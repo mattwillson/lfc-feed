@@ -70,7 +70,7 @@ class App extends React.Component<{}, State> {
       <ThemeContext.Provider value={this.state}>
         <div
           className="App"
-          style={{ backgroundColor: this.state.theme.background }}
+          style={{ backgroundColor: this.state.theme.App_background }}
         >
           <Header />
           <Feed videos={this.state.videos} />

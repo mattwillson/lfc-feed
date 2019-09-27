@@ -19,16 +19,24 @@ const VideoInfo = ({ views, likes, dislikes, video }: Props) => {
   };
 
   return (
-    <div className="VideoInfo" style={{ backgroundColor: theme.background_2 }}>
-      <h1 style={{ color: theme.foreground }}>{video.snippet.title}</h1>
+    <div
+      className="VideoInfo"
+      style={{ backgroundColor: theme.VideoInfo_background }}
+    >
+      <h1 style={{ color: theme.VideoInfo_foreground }}>
+        {video.snippet.title}
+      </h1>
       <ProgressBar
         now={100 - likes / dislikes / 100}
         title={`${addCommas(likes)} likes / ${addCommas(dislikes)} dislikes`}
       ></ProgressBar>
-      <span style={{ color: theme.foreground }}>{addCommas(views)} views</span>
+      <span style={{ color: theme.VideoInfo_foreground }}>
+        {addCommas(views)} views
+      </span>
       <time
         dateTime={video.snippet.publishedAt}
         title={moment(video.snippet.publishedAt).format('ll')}
+        style={{ color: theme.time }}
       >
         {moment(video.snippet.publishedAt).fromNow()}
       </time>

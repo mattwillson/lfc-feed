@@ -7,7 +7,7 @@ const Title = () => {
 
   return (
     <a className="Title" href="/lfc-feed" target="_self">
-      <span style={{ color: theme.primary }}>LFC FEED</span>
+      <span style={{ color: theme.Header_foreground }}>LFC FEED</span>
     </a>
   );
 };

@@ -10,7 +10,10 @@ const Header = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <header className="Header" style={{ backgroundColor: theme.background_2 }}>
+    <header
+      className="Header"
+      style={{ backgroundColor: theme.Header_background }}
+    >
       <Container>
         <MenuIcon />
         <Title />

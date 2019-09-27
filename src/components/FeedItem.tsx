@@ -62,7 +62,7 @@ const FeedItem = ({ video, videoId }: Props) => {
   return (
     <>
       <button className="FeedItem" onClick={handleClick}>
-        <Card style={{ borderColor: theme.border }}>
+        <Card style={{ borderColor: theme.FeedItem_border }}>
           <Collapse in={imageShow}>
             <div>
               <Card.Img
@@ -87,10 +87,13 @@ const FeedItem = ({ video, videoId }: Props) => {
           </Collapse>
           <Collapse in={imageShow}>
             <div>
-              <Card.Footer style={{ backgroundColor: theme.background_2 }}>
+              <Card.Footer
+                style={{ backgroundColor: theme.FeedItem_background }}
+              >
                 <time
                   dateTime={video.snippet.publishedAt}
                   title={moment(video.snippet.publishedAt).format('ll')}
+                  style={{ color: theme.time }}
                 >
                   {moment(video.snippet.publishedAt).fromNow()}
                 </time>
