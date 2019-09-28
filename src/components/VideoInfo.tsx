@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import moment from 'moment';
 import { ProgressBar } from 'react-bootstrap';
 import './VideoInfo.css';
+import PublishTime from './PublishTime';
 import { ThemeContext } from '../theme-context';
 
 type Props = {
@@ -33,13 +33,7 @@ const VideoInfo = ({ views, likes, dislikes, video }: Props) => {
       <span style={{ color: theme.VideoInfo_foreground }}>
         {addCommas(views)} views
       </span>
-      <time
-        dateTime={video.snippet.publishedAt}
-        title={moment(video.snippet.publishedAt).format('ll')}
-        style={{ color: theme.time }}
-      >
-        {moment(video.snippet.publishedAt).fromNow()}
-      </time>
+      <PublishTime video={video} />
     </div>
   );
 };
