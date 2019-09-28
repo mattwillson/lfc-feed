@@ -1,6 +1,6 @@
 .VideoInfo {
   width: 100%;
-  padding: 1.25rem;
+  padding: 3.75rem 1.25rem;
   border-top: 1px solid rgba(0, 0, 0, 0.125);
   display: flex;
   flex-direction: column;
@@ -46,6 +46,7 @@
   .VideoInfo {
     width: 50%;
     max-width: 306.33px;
+    padding: 1.25rem;
     border: 0;
   }
 

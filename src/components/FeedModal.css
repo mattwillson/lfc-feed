@@ -1,6 +1,7 @@
 .FeedModal {
-  width: calc(100% - 8rem);
+  width: 100%;
   max-width: 975px;
+  margin: 0;
   justify-content: center;
 }
 
@@ -12,5 +13,25 @@
 .FeedModal .modal-body {
   padding: 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+.modal-backdrop.show {
+  opacity: 0.8;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .FeedModal {
+    width: calc(100% - 8rem);
+    margin: 1.75rem auto;
+  }
+
+  .FeedModal .modal-body {
+    flex-direction: row;
+  }
+
+  .modal-backdrop.show {
+    opacity: 0.5;
+  }
 }
