@@ -30,8 +30,4 @@
   .FeedModal .modal-body {
     flex-direction: row;
   }
-
-  .modal-backdrop.show {
-    opacity: 0.5;
-  }
 }
