@@ -3,6 +3,7 @@ import React from 'react';
 const YouTubeIcon = () => {
   return (
     <svg
+      className="YouTubeIcon"
       xmlns="http://www.w3.org/2000/svg"
       xmlSpace="preserve"
       aria-labelledby="youtubeIcon"
@@ -11,11 +12,6 @@ const YouTubeIcon = () => {
       width="16"
       height="16"
       viewBox="0 0 71.412065 50"
-      style={{
-        margin: '0',
-        marginRight: '1rem',
-        marginLeft: '0.5rem'
-      }}
     >
       <title id="youtubeIcon">YouTube</title>
       <g transform="scale(0.58823529,0.58823529)">
