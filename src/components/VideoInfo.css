@@ -38,7 +38,6 @@
 .VideoInfo > time {
   color: var(--dimgray);
   font-size: calc(5px + 2vmin);
-  text-transform: uppercase;
 }
 
 /* Small devices (landscape phones, 576px and up) */
