@@ -1,12 +1,13 @@
 .Feed {
-  width: calc(100% - 8rem);
+  width: 100%;
   max-width: 975px;
-  margin: 2rem 4rem;
+  margin: 2rem 0;
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .Feed {
+    width: calc(100% - 8rem);
     margin: 2.8rem 4rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
