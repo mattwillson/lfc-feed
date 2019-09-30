@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { ProgressBar } from 'react-bootstrap';
 import './VideoInfo.css';
+import PostTitle from './PostTitle';
 import PublishTime from './PublishTime';
 import { ThemeContext } from '../theme-context';
 
@@ -23,9 +24,7 @@ const VideoInfo = ({ views, likes, dislikes, video }: Props) => {
       className="VideoInfo"
       style={{ backgroundColor: theme.VideoInfo_background }}
     >
-      <h1 style={{ color: theme.VideoInfo_foreground }}>
-        {video.snippet.title}
-      </h1>
+      <PostTitle video={video} />
       <ProgressBar
         now={100 - likes / dislikes / 100}
         title={`${addCommas(likes)} likes / ${addCommas(dislikes)} dislikes`}
