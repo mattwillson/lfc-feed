@@ -1,4 +1,4 @@
-.FeedItem {
+.PostImage {
   width: 100%;
   padding: 0;
   border: 0;
@@ -6,45 +6,47 @@
   margin-top: 2rem;
   cursor: pointer;
   background-color: transparent;
+  font-size: calc(10px + 2vmin);
 }
 
-.FeedItem:focus {
+.PostImage:focus {
   outline-color: var(--primary);
 }
 
-.FeedItem > .card {
+.PostImage > .card {
   border: 0;
 }
 
-.FeedItem .card-img {
+.PostImage .card-img {
   border-radius: 0;
 }
 
-.FeedItem .card-img-overlay {
+.PostImage .card-img-overlay {
   display: none;
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-  .FeedItem {
+  .PostImage {
     margin-top: 0;
   }
 
-  .FeedItem .card-img-overlay {
+  .PostImage .card-img-overlay {
     display: flex;
     flex-direction: row;
     align-items: center;
     text-align: center;
+    line-height: 1.5;
     background-color: rgba(0, 0, 0, 0.8);
     opacity: 0;
   }
 
-  .FeedItem .card-img-overlay:hover,
-  .FeedItem:focus .card-img-overlay {
+  .PostImage .card-img-overlay:hover,
+  .PostImage:focus .card-img-overlay {
     opacity: 1;
   }
 
-  .FeedItem .card-img-overlay > .card-text {
+  .PostImage .card-img-overlay > .card-text {
     color: var(--white);
     font-size: 0.6em;
   }

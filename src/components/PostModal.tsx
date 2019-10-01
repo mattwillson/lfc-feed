@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
-import './FeedModal.css';
+import './PostModal.css';
 import VideoEmbed from './VideoEmbed';
 import VideoInfo from './VideoInfo';
 
@@ -14,7 +14,7 @@ type Props = {
   videoId: string;
 };
 
-const FeedModal = ({
+const PostModal = ({
   show,
   onHide,
   views,
@@ -27,7 +27,7 @@ const FeedModal = ({
     <Modal
       show={show}
       onHide={onHide}
-      dialogClassName="FeedModal"
+      dialogClassName="PostModal"
       centered
       restoreFocus
     >
@@ -44,4 +44,4 @@ const FeedModal = ({
   );
 };
 
-export default FeedModal;
+export default PostModal;

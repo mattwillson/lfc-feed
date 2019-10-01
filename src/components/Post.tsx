@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Card } from 'react-bootstrap';
-import './FeedItem.css';
-import FeedItemNav from './FeedItemNav';
-import FeedModal from './FeedModal';
+import PostImage from './PostImage';
+import PostNav from './PostNav';
+import PostModal from './PostModal';
 import youtube from '../api/youtube';
 
 type Props = {
@@ -10,7 +9,7 @@ type Props = {
   videoId: string;
 };
 
-const FeedItem = ({ video, videoId }: Props) => {
+const Post = ({ video, videoId }: Props) => {
   const [modalShow, setModalShow] = useState(false);
   const [views, setViews] = useState(0);
   const [likes, setLikes] = useState(0);
@@ -37,25 +36,14 @@ const FeedItem = ({ video, videoId }: Props) => {
     setModalShow(true);
   };
 
-  const getImgSrc: () => string = () => {
-    const { thumbnails } = video.snippet;
-    return thumbnails.maxres ? thumbnails.maxres.url : thumbnails.medium.url;
-  };
-
   return (
     <>
-      <button className="FeedItem" onClick={handleClick}>
-        <Card>
-          <Card.Img src={getImgSrc()} title={video.snippet.title} />
-          <Card.ImgOverlay>
-            <Card.Text>{video.snippet.title}</Card.Text>
-          </Card.ImgOverlay>
-        </Card>
-      </button>
+      <div className="Post" style={{ fontSize: '0' }}>
+        <PostImage handleClick={handleClick} video={video} />
+        <PostNav video={video} />
+      </div>
 
-      <FeedItemNav video={video} />
-
-      <FeedModal
+      <PostModal
         show={modalShow}
         onHide={(): void => {
           setModalShow(false);
@@ -70,4 +58,4 @@ const FeedItem = ({ video, videoId }: Props) => {
   );
 };
 
-export default FeedItem;
+export default Post;
