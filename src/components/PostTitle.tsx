@@ -7,7 +7,9 @@ const PostTitle = ({ video }: Props) => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <h1 style={{ color: theme.VideoInfo_foreground }}>{video.snippet.title}</h1>
+    <h1 className="PostTitle" style={{ color: theme.VideoInfo_foreground }}>
+      {video.snippet.title}
+    </h1>
   );
 };
 
