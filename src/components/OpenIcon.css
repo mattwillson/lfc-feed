@@ -1,0 +1,9 @@
+.OpenIcon {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.OpenIcon:focus {
+  outline-color: var(--primary);
+}
