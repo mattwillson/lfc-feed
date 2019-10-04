@@ -1,6 +1,6 @@
 .Post > .PostTitle {
   padding: 1.5rem;
-  padding-bottom: 0;
+  padding-bottom: 0.75rem;
   margin: 0;
   font-size: calc(10px + 2vmin);
 }
