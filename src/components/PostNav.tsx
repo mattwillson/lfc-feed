@@ -4,16 +4,19 @@ import YouTubeIcon from './YouTubeIcon';
 import PublishTime from './PublishTime';
 import OpenIcon from './OpenIcon';
 
-type Props = { video: any };
+type Props = {
+  handleClick: () => void;
+  video: any;
+};
 
-const PostNav = ({ video }: Props) => {
+const PostNav = ({ handleClick, video }: Props) => {
   return (
     <div className="PostNav">
       <div>
         <YouTubeIcon />
         <PublishTime video={video} />
       </div>
-      <OpenIcon />
+      <OpenIcon handleClick={handleClick} />
     </div>
   );
 };

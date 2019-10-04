@@ -43,7 +43,7 @@ const Post = ({ video, videoId }: Props) => {
       <div className="Post" style={{ fontSize: '0' }}>
         <PostImage handleClick={handleClick} video={video} />
         <PostTitle video={video} />
-        <PostNav video={video} />
+        <PostNav handleClick={handleClick} video={video} />
       </div>
 
       <PostModal

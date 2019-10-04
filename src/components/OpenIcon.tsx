@@ -2,11 +2,15 @@ import React, { useContext } from 'react';
 import './OpenIcon.css';
 import { ThemeContext } from '../theme-context';
 
-const OpenIcon = () => {
+type Props = {
+  handleClick: () => void;
+};
+
+const OpenIcon = ({ handleClick }: Props) => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <button className="OpenIcon">
+    <button className="OpenIcon" onClick={handleClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
