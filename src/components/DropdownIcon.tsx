@@ -2,11 +2,15 @@ import React, { useContext } from 'react';
 import './DropdownIcon.css';
 import { ThemeContext } from '../theme-context';
 
-const DropdownIcon = () => {
+type Props = {
+  innerProps: any;
+};
+
+const DropdownIcon = ({ innerProps }: Props) => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <button className="DropdownIcon">
+    <button className="DropdownIcon" {...innerProps}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="27"

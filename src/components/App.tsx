@@ -31,13 +31,13 @@ class App extends React.Component<{}, State> {
   };
 
   componentDidMount() {
-    this.getVideos();
+    this.getVideos('UU9LQwHZoucFT94I2h6JOcjw');
   }
 
-  getVideos = async () => {
+  getVideos = async (playlistId: string) => {
     const response: any = await youtube.get('/playlistItems', {
       params: {
-        playlistId: 'UU9LQwHZoucFT94I2h6JOcjw',
+        playlistId: playlistId,
         part: 'snippet',
         maxResults: 30
       }
@@ -72,7 +72,7 @@ class App extends React.Component<{}, State> {
           className="App"
           style={{ backgroundColor: this.state.theme.App_background }}
         >
-          <Header />
+          <Header getVideos={this.getVideos} />
           <Feed videos={this.state.videos} />
         </div>
       </ThemeContext.Provider>
