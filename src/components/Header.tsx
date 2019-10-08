@@ -66,7 +66,7 @@ const Header = ({ getVideos }: Props) => {
         : 'transparent',
       ':active': {
         color: '#fff',
-        backgroundColor: '#00a599'
+        backgroundColor: 'rgba(209,1,34,0.5)'
       }
     }),
     control: () => ({
