@@ -14,11 +14,33 @@ type Props = {
 const Header = ({ getVideos }: Props) => {
   const { theme } = useContext(ThemeContext);
 
-  const [selected, setSelected] = useState(null);
-
-  const handleChange = (selected: any) => {
-    setSelected(selected);
-    getVideos(selected.playlistId);
+  const customStyles = {
+    menu: (provided: any) => ({
+      ...provided,
+      backgroundColor: theme.Header_background
+    }),
+    option: (provided: any, state: any) => ({
+      ...provided,
+      fontSize: 16,
+      padding: 15,
+      color: state.isSelected ? '#fff' : theme.Header_foreground,
+      backgroundColor: state.isSelected
+        ? '#d10122'
+        : state.isFocused
+        ? 'rgba(209,1,34,0.33)'
+        : 'transparent',
+      ':active': {
+        color: '#fff',
+        backgroundColor: 'rgba(209,1,34,0.5)'
+      }
+    }),
+    control: () => ({
+      width: 100
+    }),
+    input: () => ({ display: 'none' }),
+    placeholder: () => ({ display: 'none' }),
+    valueContainer: () => ({ display: 'none' }),
+    indicatorSeparator: () => ({ display: 'none' })
   };
 
   const options = [
@@ -49,33 +71,11 @@ const Header = ({ getVideos }: Props) => {
     }
   ];
 
-  const customStyles = {
-    menu: (provided: any) => ({
-      ...provided,
-      backgroundColor: theme.Header_background
-    }),
-    option: (provided: any, state: any) => ({
-      ...provided,
-      fontSize: 16,
-      padding: 15,
-      color: state.isSelected ? '#fff' : theme.Header_foreground,
-      backgroundColor: state.isSelected
-        ? '#d10122'
-        : state.isFocused
-        ? 'rgba(209,1,34,0.33)'
-        : 'transparent',
-      ':active': {
-        color: '#fff',
-        backgroundColor: 'rgba(209,1,34,0.5)'
-      }
-    }),
-    control: () => ({
-      width: 100
-    }),
-    input: () => ({ display: 'none' }),
-    placeholder: () => ({ display: 'none' }),
-    valueContainer: () => ({ display: 'none' }),
-    indicatorSeparator: () => ({ display: 'none' })
+  const [selected, setSelected] = useState(options[0]);
+
+  const handleChange = (selected: any) => {
+    setSelected(selected);
+    getVideos(selected.playlistId);
   };
 
   return (
