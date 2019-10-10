@@ -19,6 +19,7 @@ const Header = ({ getVideos }: Props) => {
       ...provided,
       borderRadius: 0,
       marginTop: 24,
+      marginLeft: -20,
       backgroundColor: theme.Header_background
     }),
     menuList: (provided: any) => ({
