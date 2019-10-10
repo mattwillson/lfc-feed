@@ -17,6 +17,7 @@ const Header = ({ getVideos }: Props) => {
   const customStyles = {
     menu: (provided: any) => ({
       ...provided,
+      marginTop: 24,
       backgroundColor: theme.Header_background
     }),
     option: (provided: any, state: any) => ({
