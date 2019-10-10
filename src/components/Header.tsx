@@ -21,6 +21,10 @@ const Header = ({ getVideos }: Props) => {
       marginTop: 24,
       backgroundColor: theme.Header_background
     }),
+    menuList: (provided: any) => ({
+      ...provided,
+      padding: 0
+    }),
     option: (provided: any, state: any) => ({
       ...provided,
       fontSize: 16,
