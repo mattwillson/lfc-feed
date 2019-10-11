@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6351802c0e70d2856356cd267f1684e9",
+    "revision": "dfe1f6fc90ecf26f7beacc9417298e83",
     "url": "/lfc-feed/index.html"
   },
   {
-    "revision": "7955d57bbdac145acbf4",
-    "url": "/lfc-feed/static/css/main.734209b1.chunk.css"
+    "revision": "c0f0bcb25307a70865e0",
+    "url": "/lfc-feed/static/css/main.7ba45d24.chunk.css"
   },
   {
     "revision": "982eed0e07019e771c2a",
     "url": "/lfc-feed/static/js/2.49f9f0e0.chunk.js"
   },
   {
-    "revision": "7955d57bbdac145acbf4",
+    "revision": "c0f0bcb25307a70865e0",
     "url": "/lfc-feed/static/js/main.c071973b.chunk.js"
   },
   {
