@@ -9,8 +9,8 @@ const YouTubeIcon = () => {
       aria-labelledby="youtubeIcon"
       x="0px"
       y="0px"
-      width="16"
-      height="16"
+      width="18"
+      height="18"
       viewBox="0 0 71.412065 50"
     >
       <title id="youtubeIcon">YouTube</title>

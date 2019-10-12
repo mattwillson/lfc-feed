@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import './Post.css';
 import PostImage from './PostImage';
-import PostTitle from './PostTitle';
-import PostNav from './PostNav';
+import PostInfo from './PostInfo';
 import PostModal from './PostModal';
 import youtube from '../api/youtube';
 
@@ -42,8 +40,7 @@ const Post = ({ video, videoId }: Props) => {
     <>
       <div className="Post" style={{ fontSize: '0' }}>
         <PostImage handleClick={handleClick} video={video} />
-        <PostTitle video={video} />
-        <PostNav handleClick={handleClick} video={video} />
+        <PostInfo handleClick={handleClick} video={video} />
       </div>
 
       <PostModal
