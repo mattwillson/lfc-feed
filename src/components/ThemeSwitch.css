@@ -40,10 +40,6 @@
 }
 
 .ThemeSwitch .react-toggle-track {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
   width: 50px;
   height: 24px;
   padding: 0;
@@ -69,9 +65,15 @@
 }
 
 .ThemeSwitch .react-toggle-track-check {
-  display: flex;
+  position: absolute;
   width: 16px;
   height: 16px;
+  left: 5px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 0;
   opacity: 0;
   -webkit-transition: opacity 0.25s ease;
   -moz-transition: opacity 0.25s ease;
@@ -86,9 +88,15 @@
 }
 
 .ThemeSwitch .react-toggle-track-x {
-  display: flex;
+  position: absolute;
   width: 16px;
   height: 16px;
+  right: 5px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 0;
   opacity: 1;
   -webkit-transition: opacity 0.25s ease;
   -moz-transition: opacity 0.25s ease;
