@@ -26,7 +26,7 @@ const VideoInfo = ({ views, likes, dislikes, video }: Props) => {
     >
       <PostTitle video={video} />
       <ProgressBar
-        now={100 - likes / dislikes / 100}
+        now={dislikes === 0 ? 100 : 100 - likes / dislikes / 100}
         title={`${addCommas(likes)} likes / ${addCommas(dislikes)} dislikes`}
       ></ProgressBar>
       <span style={{ color: theme.VideoInfo_foreground }}>
